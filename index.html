@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech Goals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #e0e0e0;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+        img{
+            margin-bottom: 40px;
+        }
+      
+    
+        a{
+            text-decoration: none;
+            line-height: 25px;
+            font-weight: 600;
+            padding: 12px 25px 25px  ;
+        }
+        .btn-1,
+        .btn-2,
+        .btn-3{
+            font-weight: 600;
+            padding: 5px 10px;
+            background: #3179d2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            margin: 5px 30px;
+        }
+        .btn-1:hover,
+        .btn-2:hover,
+        .btn-3:hover{
+            background-color: transparent;
+            color: #000;
+            transition: 0.6s;
+        }
+       
+        footer{
+            margin-top: 50px;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #0073e6;
+            color: white;
+        }
+          
+        @media (max-width:530px){
+           img{
+            width: 80%;
+            }
+         
+        }
+     
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Tech Goals for the Next 2 Years</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Goal 1: Enhance My Programming Skills</h2>
+            <ul>
+                <li>Master Python and JavaScript</li>
+                <li>Learn advanced concepts in React</li>
+                <li>Build projects using different programming languages</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Goal 2: Contribute to Open Source Projects</h2>
+            <ul>
+                <li>Find and contribute to projects on GitHub</li>
+                <li>Attend open-source community events</li>
+                <li>Start my own open-source project</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Goal 3: Gain Experience in Web Development</h2>
+            <ul>
+                <li>Learn modern front-end frameworks like React and Vue.js</li>
+                <li>Develop and deploy a full-stack web application</li>
+                <li>Understand back-end technologies like Node.js and Django</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Goal 4: Learn about Cloud Computing</h2>
+            <ul>
+                <li>Get certified in AWS or Google Cloud</li>
+                <li>Deploy applications using cloud services</li>
+                <li>Understand cloud architecture and services</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Goal 5: Stay Updated with Tech Trends</h2>
+            <ul>
+                <li>Read tech blogs and books regularly</li>
+                <li>Attend webinars and tech conferences</li>
+                <li>Join tech communities and forums</li>
+            </ul>
+        </section>
+        <div>
+            <p data-testid="current-date-time"></p>
+            <p data-testid="user-name"></p>
+            <p data-testid="day-of-week"></p>
+            <p data-testid="user-email"></p>
+            <img data-testid="profile-picture" src="" alt="Profile Picture"> <br>
+           
+        </div>
+        <div>
+            <a href="hng.tech/learn" data-testid="hngLink" class="btn-1">Visit Profile</a> 
+            <a href=" keyword.dog" data-testid="keywordLink" class="btn-2">keyword profile</a> 
+            <a href=" scrapeanyweb.site" data-testid="scrapeanywebLink" class="btn-3"> scrapeanywebLink </a>
+        </div>
+        <footer>
+            <p>&copy; 2024 Clinton Onalaja. All rights reserved.</p>
+        </footer>
+      
+       
+        <script>
+            function updateDateTime() {
+            const now = new Date();
+            const formattedDateTime = now.toLocaleString();
+            const dayOfWeek = now.toLocaleDateString(undefined, { weekday: 'long' });
+            
+            document.querySelector('[data-testid="current-date-time"]').textContent = formattedDateTime;
+            document.querySelector('[data-testid="day-of-week"]').textContent = dayOfWeek;
+        }
+
+        function setUserName(name) {
+            document.querySelector('[data-testid="user-name"]').textContent = name;
+        }
+
+        function setUserEmail(email) {
+            document.querySelector('[data-testid="user-email"]').textContent = email;
+        }
+        function setProfilePicture(url) {
+            document.querySelector('[data-testid="profile-picture"]').src = url;
+            
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        setUserName("Clinton onalaja");
+        setUserEmail("clintononalaja11@gmail.com");
+        setProfilePicture("https://ca.slack-edge.com/T07466B189M-U07B13DHW6L-7e1ba899ef9f-512")
+        </script>   
+</body>
+</html>
